@@ -1,0 +1,15 @@
+<div class="search-container">
+  <label for="search">Search by name:</label>
+  <input type="text" id="search" [(ngModel)]="searchQuery" placeholder="">
+</div>
+
+<ul class="product-list">
+  <li *ngFor="let product of filteredProducts" class="product-item">
+    <img [src]="product.img" [alt]="product.name + ' Image'">
+    <div>
+      <h3>{{ product.name }}</h3>
+      <p>ID: {{ product.id }}</p>
+      <p>{{ product.description }}</p>
+    </div>
+  </li>
+</ul>
